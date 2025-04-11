@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cheerio": "^1.0.0",
     "next": "15.3.0",
     "puppeteer": "^24.6.1",
     "react": "^19.0.0",

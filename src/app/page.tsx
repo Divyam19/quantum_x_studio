@@ -62,28 +62,6 @@ export default function Home() {
 
       {isLoading && <p className="text-white">Loading...</p>}
 
-      {/* <div className="grid grid-cols-3 gap-2">
-				{searchResults?.map((prod, i) => (
-					<div
-						key={i}
-						className="text-white bg-zinc-800 p-2 rounded-lg"
-					>
-						<h1 className="truncate text-2xl">{prod.title}</h1>
-						<div className="relative h-[300px] w-full">
-							<Image
-								src={prod.imageUrl}
-								alt={prod.title}
-								fill
-								className="object-cover"
-							/>
-						</div>
-						<div className="flex m-2 justify-between">
-							<p>Reviews : {prod.review}</p>
-							<p>Price : {prod.price}</p>
-						</div>
-					</div>
-				))}
-			</div> */}
     </main>
   );
 }
