@@ -20,15 +20,18 @@ export default function Home() {
     event.preventDefault();
     setIsLoading(true);
 
+    // Concatenate the site search operator to the search prompt
+    const modifiedSearchPrompt = `${searchPrompt} site:https://finance.yahoo.com/news/`;
+
     const res = await fetch("/api/searchprod", {
       method: "POST",
-      body: JSON.stringify({ searchPrompt }),
+      body: JSON.stringify({ searchPrompt: modifiedSearchPrompt }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-    const { products } = await res.json();
 
+    const { products } = await res.json();
     console.log(products);
     setSearchResults(products);
     console.log(searchResults);
